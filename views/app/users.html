@@ -1,0 +1,16 @@
+<index:>
+  <main>
+    <view name="list"></view>
+  </main>
+
+<list:>
+  {{if _page.users}}
+    <ul class="users-list">
+      {{each _page.users}}
+        <li><a href="/users/{{this.id}}">{{this.name}}</a></li>
+      {{/}}
+    </ul>
+  {{else}}
+    <p>No users added yet.</p>
+    <p>How about <a href="/users/new">adding someone</a>?</p>
+  {{/}}
